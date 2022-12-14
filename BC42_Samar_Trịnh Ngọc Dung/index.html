@@ -50,6 +50,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- MY CSS -->
     <link rel="stylesheet" href="./CSS/index.css" />
     <title>Samar</title>
@@ -95,33 +100,31 @@
 
       <!-- HERO -->
       <section class="hero-wrapper">
-        <div class="section__container">
-          <div class="hero-container">
-            <div class="hero__content">
-              <p class="section__name hero__animation">We are The Best</p>
-              <p class="section__title hero__animation delay1">
-                Freelance Product Designer Running
-              </p>
-              <p class="content hero__animation delay2">
-                We develop the relationships that underpin the next phase in
-                your <br />
-                organisation’s growth.
-              </p>
-              <ul class="hero__animation delay3">
-                <div class="hero__list">
-                  <i class="las la-check bg__img1"></i>
-                  <li class="content">Master's degree in designing</li>
-                </div>
-                <div class="hero__list">
-                  <i class="las la-check bg__img1"></i>
-                  <li class="content">Outstanding mobile design</li>
-                </div>
-              </ul>
-              <button class="button hero__animation delay4">GET STARTED</button>
-            </div>
-            <div class="hero__img hero__animation delay3">
-              <img src="./img/pic3_1.png" alt="" />
-            </div>
+        <div class="hero-container">
+          <div class="hero__content">
+            <p class="section__name hero__animation">We are The Best</p>
+            <p class="section__title hero__animation delay1">
+              Freelance Product Designer Running
+            </p>
+            <p class="content hero__animation delay2">
+              We develop the relationships that underpin the next phase in your
+              <br />
+              organisation’s growth.
+            </p>
+            <ul class="hero__animation delay3">
+              <div class="hero__list">
+                <i class="las la-check bg__img1"></i>
+                <li class="content">Master's degree in designing</li>
+              </div>
+              <div class="hero__list">
+                <i class="las la-check bg__img1"></i>
+                <li class="content">Outstanding mobile design</li>
+              </div>
+            </ul>
+            <button class="button hero__animation delay4">GET STARTED</button>
+          </div>
+          <div class="hero__img hero__animation delay3">
+            <img src="./img/pic3_1.png" alt="" />
           </div>
         </div>
       </section>
@@ -580,92 +583,87 @@
 
     <!-- TESTIMONIAL -->
     <section class="testimonial">
-      <div class="section__container">
+      <div class="testimonial__content section__container">
         <div class="testimonial__title">
           <p class="section__name">Testimonial</p>
           <p class="section__title">What Our Clients Say’s</p>
         </div>
-        <div class="testimonial__img">
-          <div class="testimonial__img--item">
-            <img src="./img/pic1_4.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape1"
-              src="./img/pattern12.png"
-              alt=""
-            />
-          </div>
-          <div class="testimonial__img--item">
-            <img src="./img/pic2_3.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape2"
-              src="./img/pattern12.png"
-              alt=""
-            />
-          </div>
-          <div class="testimonial__img--item">
-            <img src="./img/pic3_3.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape3"
-              src="./img/pattern12.png"
-              alt=""
-            />
-          </div>
-          <div class="testimonial__img--item">
-            <img src="./img/pic1_4.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape1"
-              src="./img/pattern12.png"
-              alt=""
-            />
-          </div>
-          <div class="testimonial__img--item">
-            <img src="./img/pic2_3.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape2"
-              src="./img/pattern12.png"
-              alt=""
-            />
-          </div>
-          <div class="testimonial__img--item">
-            <img src="./img/pic3_3.jpg" alt="" />
-            <img
-              class="testimonial__shape animate__animated animate__fadeInUp animate__infinite shape3"
-              src="./img/pattern12.png"
-              alt=""
-            />
+        <!-- Swiper -->
+        <div class="swiper-container testimonial__thumbs">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial__pic">
+                <img
+                  src="https://samar.dexignzone.com/xhtml/images/testimonials/pic1.jpg"
+                  alt=""
+                />
+                <div class="shape-bx"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial__pic">
+                <img
+                  src="https://samar.dexignzone.com/xhtml/images/testimonials/pic2.jpg"
+                  alt=""
+                />
+                <div class="shape-bx"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial__pic">
+                <img
+                  src="https://samar.dexignzone.com/xhtml/images/testimonials/pic3.jpg"
+                  alt=""
+                />
+                <div class="shape-bx"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="testimonial__content">
-          <div class="testimonial__item" id="testimonial__item1">
-            <i class="flaticon-quotation"></i>
-            <h3>Cak Dikin 1</h3>
-            <p>CEO & Founder</p>
-            <p>
-              Duis feugiat est tincidunt ligula maximus convallis. Aenean
-              ultricies, mi non vestibulum auctor, erat tortor porttitor ipsum,
-              nec dictum tortor sem eget nunc. Etiam sed facilisis erat.
-            </p>
+
+        <div class="swiper-container testimonial__comment">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial__item">
+                <i class="flaticon-quotation"></i>
+                <h3>Cak Dikin 1</h3>
+                <p>CEO & Founder</p>
+                <p>
+                  Duis feugiat est tincidunt ligula maximus convallis. Aenean
+                  ultricies, mi non vestibulum auctor, erat tortor porttitor
+                  ipsum, nec dictum tortor sem eget nunc. Etiam sed facilisis
+                  erat.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial__item">
+                <i class="flaticon-quotation"></i>
+                <h3>Cak Dikin 1</h3>
+                <p>CEO & Founder</p>
+                <p>
+                  Duis feugiat est tincidunt ligula maximus convallis. Aenean
+                  ultricies, mi non vestibulum auctor, erat tortor porttitor
+                  ipsum, nec dictum tortor sem eget nunc. Etiam sed facilisis
+                  erat.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial__item">
+                <i class="flaticon-quotation"></i>
+                <h3>Cak Dikin 1</h3>
+                <p>CEO & Founder</p>
+                <p>
+                  Duis feugiat est tincidunt ligula maximus convallis. Aenean
+                  ultricies, mi non vestibulum auctor, erat tortor porttitor
+                  ipsum, nec dictum tortor sem eget nunc. Etiam sed facilisis
+                  erat.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="testimonial__item" id="testimonial__item2">
-            <i class="flaticon-quotation"></i>
-            <h3>Cak Dikin 1</h3>
-            <p>CEO & Founder</p>
-            <p>
-              Duis feugiat est tincidunt ligula maximus convallis. Aenean
-              ultricies, mi non vestibulum auctor, erat tortor porttitor ipsum,
-              nec dictum tortor sem eget nunc. Etiam sed facilisis erat.
-            </p>
-          </div>
-          <div class="testimonial__item" id="testimonial__item3">
-            <i class="flaticon-quotation"></i>
-            <h3>Cak Dikin 1</h3>
-            <p>CEO & Founder</p>
-            <p>
-              Duis feugiat est tincidunt ligula maximus convallis. Aenean
-              ultricies, mi non vestibulum auctor, erat tortor porttitor ipsum,
-              nec dictum tortor sem eget nunc. Etiam sed facilisis erat.
-            </p>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -990,45 +988,39 @@
     </script>
     <!-- FANCY BOX -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- SLCIK CAROUSEL -->
+    <!-- SLICK JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var testimonialThumbs = new Swiper(".testimonial__thumbs", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        centeredSlides: true,
+        freeMode: true,
+        autoplay: true,
+        loop: true,
+        speed: 3000,
+      });
+      var testimonialContent = new Swiper(".testimonial__comment", {
+        spaceBetween: 10,
+        autoplay: true,
+        loop: true,
+        speed: 3000,
+        thumbs: {
+          swiper: testimonialThumbs,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
-  <!-- SLCIK CAROUSEL -->
-  <!-- SLICK JS -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script>
-    $(".testimonial__content").slick({
-      // infinite: tạo vòng lặp
-      infinite: true,
-      slidesToShow: 1,
-      // slidestoshow:số item hiển thị
-      slidesToScroll: 1,
-      // dots:thêm dấu chấm tròn
-      dots: true,
-      // autoplay:tự chạy slide
-      // autoplay: true,
-      // autospeed:tốc độ tự động chạy(ms)
-      autoplaySpeed: 3000,
-      // arrows:tắt dấu mũi teen 2 bên slide
-      arrows: false,
-      speed: 3000,
-      asNavFor: ".testimonial__img",
-    });
-  </script>
-  <script>
-    $(".testimonial__img").slick({
-      infinite: true,
-      slidesToShow: 3,
-      dots: false,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      arrows: false,
-      speed: 3000,
-      asNavFor: ".testimonial__content",
-    });
-  </script>
 </html>
