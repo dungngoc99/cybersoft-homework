@@ -58,15 +58,26 @@ function changeMoney() {
 //- Chiều dài
 //- Chiều rộng
 //Xử lí:
-//- Chu vi HCN tính theo công thức: CV = (dài + rộng)*2
-//- Gọi perimeter là chu vi hình chữ nhật
-//- Tính chu vi hình chữ nhật: perimeter = (widthOfRectangle + heightOfRectangle)*2
-//- Diện tích HCN tính theo công thức: S = dài * rộng
-//- Gọi square là diện tích hình chữ nhật
-//- Tính diện tích HCN: square = widthOfRectangle * heightOfRectangle
+//- Dùng hàm function để xử lí
+//- Gọi biến cho giá trị chiều dài, chiều rộng nhập vào
+//- Gán giá trị cho chu vi và diện tích hình chữ nhật
 //Output:
 //- Xuất chu vi và diện tích HCN ra màn hình
 
+function perimeter() {
+  let widthOfRectangle = +document.getElementById("widthOfRectangle").value;
+  let heightOfRectangle = +document.getElementById("heightOfRectangle").value;
+  let perimeterOfRetangle = (widthOfRectangle + heightOfRectangle) * 2;
+  let perimeterEl = document.getElementById("result1");
+  perimeterEl.innerHTML = "Chu vi hình chữ nhật là:" + perimeterOfRetangle;
+}
+function square() {
+  let widthOfRectangle = +document.getElementById("widthOfRectangle").value;
+  let heightOfRectangle = +document.getElementById("heightOfRectangle").value;
+  let squareOfRetangle = widthOfRectangle * heightOfRectangle;
+  let squareEl = document.getElementById("result2");
+  squareEl.innerHTML = "Diện tích hình chữ nhật là:" + squareOfRetangle;
+}
 //Bài tập 5: Tính tổng 2 ký số
 //Input
 //- Số có hai chữ số
@@ -78,3 +89,11 @@ function changeMoney() {
 //- Công thức tính tổng 2 ký số: (số ở hàng chục) + (số ở hàng đơn vị) => totalOfNumber = firstNumber + secondNumber
 //Output:
 //- Xuất ra tổng 2 ký số
+function total() {
+  let inputNumber = +document.getElementById("inputNumber").value;
+  let secondNumber = inputNumber % 10;
+  let firstNumber = Math.floor(inputNumber / 10);
+  let totalOfNumber = secondNumber + firstNumber;
+  let ex5El = document.getElementById("ex5");
+  ex5El.innerHTML = "Tổng hai ký số là:" + totalOfNumber;
+}

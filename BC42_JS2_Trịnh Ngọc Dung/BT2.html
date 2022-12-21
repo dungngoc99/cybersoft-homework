@@ -34,11 +34,7 @@
     <h2>Bài tập 3</h2>
     <form>
       <label for="numberOfDollar">Nhập vào số tiền cần quy đổi:</label>
-      <input
-        id="numberOfDollar"
-        type="text"
-        placeholder="Nhập vào số tiền"
-      />
+      <input id="numberOfDollar" type="text" placeholder="Nhập vào số tiền" />
       <span>$</span>
     </form>
     <button onclick="changeMoney()">Kết quả</button>
@@ -46,16 +42,24 @@
 
     <h2>Bài tập 4</h2>
     <form>
-      <label for="numberOfDollar">Nhập vào số tiền cần quy đổi:</label>
-      <input
-        id="numberOfDollar"
-        type="text"
-        placeholder="Nhập vào số tiền"
-      />
-      <span>$</span>
+      <label for="widthOfRectangle">Nhập vào chiều rộng:</label>
+      <input id="widthOfRectangle" type="text" placeholder="Nhập chiều rộng" />
+      <label for="heightOfRectangle">Nhập vào chiều dài:</label>
+      <input id="heightOfRectangle" type="text" placeholder="Nhập chiều dài" />
     </form>
-    <button onclick="changeMoney()">Kết quả</button>
-    <p id="ex3">Chuyển sang VNĐ:</p>
+    <button onclick="perimeter()">Kết quả</button>
+    <p id="result1">Chu vi hình chữ nhật là:</p>
+    <button onclick="square()">Kết quả</button>
+    <p id="result2">Diện tích hình chữ nhật là:</p>
+
+    <h2>Bài tập 5</h2>
+    <form>
+      <label for="inputNumber">Nhập vào số có hai chữ số:</label>
+      <input id="inputNumber" type="text" placeholder="Nhập số có hai chữ sô" />
+    </form>
+    <button onclick="total()">Kết quả</button>
+    <p id="ex5">Tổng hai ký số là:</p>
+
     <script src="./BT2.js"></script>
   </body>
 </html>
