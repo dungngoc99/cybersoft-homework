@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bài tập JS</title>
-  </head>
-  <body>
-    <!-- BÀI 1 -->
-    <h1>Bài tập JS buổi 4</h1>
-    <h2>Bài 1</h2>
-    <p>Nhập vào 3 số nguyên</p>
-    <form>
-      <input id="number1" type="number" placeholder="Số nguyên 1" />
-      <input id="number2" type="number" placeholder="Số nguyên 2" />
-      <input id="number3" type="number" placeholder="Số nguyên 3" />
-    </form>
-    <button onclick="resultExp1()">Kết quả</button>
-    <p id="ex1">Sắp xếp các số theo thứ tự tăng dần:</p>
-    <!-- BÀI 2 -->
-    <h2>Bài 2</h2>
-    <p>Ai là người đang sử dụng máy ?</p>
-    <form>
-      <select id="selWho">
-        <option value="N">Không</option>
-        <option value="B">bố</option>
-        <option value="M">mẹ</option>
-        <option value="A">anh trai</option>
-        <option value="E">em gái</option>
-      </select>
-    </form>
-    <button onclick="resultExp2()">Kết quả</button>
-    <p id="ex2"></p>
-    <script src="./BT4.js"></script>
-    <!-- BÀI 3 -->
-    <h2>Bài 3</h2>
-    <p>Nhập vào 3 số nguyên</p>
-    <form>
-      <input id="numA" type="number" placeholder="Số nguyên 1" />
-      <input id="numB" type="number" placeholder="Số nguyên 2" />
-      <input id="numC" type="number" placeholder="Số nguyên 3" />
-    </form>
-    <button onclick="resultExp3()">Kết quả</button>
-    <p id="ex3"></p>
-    <!-- BÀI 4 -->
-    <h2>Bài 4</h2>
-    <p>Nhập số đo 3 cạnh của tam giác</p>
-    <form>
-      <input id="side_1" type="number" placeholder="Cạnh thứ 1" />
-      <input id="side_2" type="number" placeholder="Cạnh thứ 2" />
-      <input id="side_3" type="number" placeholder="Cạnh thứ 3" />
-    </form>
-    <button onclick="resultExp4()">Kết quả</button>
-    <p id="ex4"></p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập JS</title>
+</head>
+
+<body>
+  <!-- BÀI 1 -->
+  <h1>Bài tập JS buổi 5_2</h1>
+  <h2>Bài 1</h2>
+  <form>
+    <label for="name">Họ và tên</label>
+    <input id="name" type="text" placeholder="Nhập họ tên"> <br><br>
+    <label for="perIn">Tổng thu nhập cá nhân (VNĐ)</label>
+    <input id="perIn" type="number" placeholder="Tổng thu nhập (VNĐ)">
+    <br><br>
+    <label for="staff">Số người phụ thuộc</label>
+    <input id="staff" type="number" placeholder="Số người phụ thuộc">
+  </form>
+  <br>
+  <button onclick="result1()">Kết quả</button>
+  <p id="ex1"></p>
+  <!--  BÀI 2 -->
+  <h2>Bài 2</h2>
+  <select id="user">
+    <option value="">Chọn khách hàng</option>
+    <option value="company">Doanh nghiệp</option>
+    <option value="home">Nhà dân</option>
+  </select>
+  <form id="form">
+    <input type="text" placeholder="Mã khách hàng" id="customerId">
+    <input type="number" placeholder="Số kênh cao cấp" id="chanelId">
+  </form>
+  <button onclick="result2()">Kết quả</button>
+  <p id="ex2"></p>
+  <script src=" ./BT5_2.js"></script>
+</body>
+
 </html>
