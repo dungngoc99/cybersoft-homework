@@ -1,4 +1,3 @@
-// //Bài 1: Cho người dùng nhập vào 3 số nguyên. Viết phương trình 3 số xuất theo thứ tự tăng dần
 //Input:
 //- Nhập vào 3 số nguyên
 //Logic:
