@@ -32,6 +32,9 @@ function ex1() {
 }
 
 // Bài 2: tính tiền điện
+//Input: tên người dùng, số điện đã dùng
+//Logic:
+//- Tiền điện được tính ở các mốc khác nhau: 50kw đầu 500đ, 50kw tiếp theo giá 650đ, 100 kw tiếp theo 850đ, 150kw tiếp theo 1100đ, số kw còn lại là 1300đ
 
 function ex2() {
   const count = +document.getElementById("count").value;
@@ -48,5 +51,5 @@ function ex2() {
     sum = 50 * (500 + 650) + 100 * 850 + 150 * 1100 + (count - 350) * 1300;
   }
   const result2 = document.getElementById("result2");
-  result2.innerHTML = `Số tiền điện phải trả là: ${sum}`;
+  result2.innerHTML = `Số tiền điện phải trả là: ${sum} đồng`;
 }
