@@ -1,7 +1,7 @@
 // Bài 1: Viết chương trình nhập vào ngày, tháng, năm (Giả sử nhập đúng, không cần kiểm tra hợp lệ). Tìm ngày, tháng, năm của ngày tiếp theo. Tương tự tìm ngày tháng năm của ngày trước đó.
 //Input: ngày, tháng, năm nhập vào
 //Logic:
-//- Dom dữ liệu người dùng nhập vào
+//- Dom dữ liệu người dùng nhập vào và gọi tên
 //- Dùng If-Else
 //* Tìm ngày tháng năm của ngày tiếp theo
 //- Nếu là ngày 31 tháng 12 => trả về ngày 1 tháng 1 năm cộng 1đv
@@ -17,6 +17,7 @@
 //+ Nếu là năm không nhuận(số năm chia 4 dư khác 0):nếu là ngày 31 => trả về ngày 28 tháng 2, nếu là những ngày khác => trả về ngày trừ đi 1 đơn vị
 //- Nếu tháng là một trong những tháng 1,3,5,7,8,10,12 => nếu ngày là 1 thì trả về ngày 30 và tháng trừ đi 1đv, nếu là những ngày khác thì ngày trừ đi 1 đv
 //- Những trường hợp còn lại: nếu ngày là 1 thì trả về ngày 31 và tháng trừ đi 1đv, nếu là những ngày khác thì ngày trừ đi 1 đv
+//Output: hiện ngày tháng năm của ngày mai và ngày trước đó
 function ex1_1() {
   let day = +document.getElementById("day").value;
   let month = +document.getElementById("month").value;
@@ -114,6 +115,13 @@ function ex1_2() {
   ex1El2.innerHTML = `Hôm qua là: ${day} tháng ${month} năm ${year}`;
 }
 // Bài 2:Viết chương trình nhập vào tháng, năm. Cho biết tháng đó có bao nhiêu ngày. (bao gồm tháng của năm nhuận).
+//Input: Nhập vào tháng , năm
+//Logic:
+//- Dom giá trị người dùng nhập vào và gọi tên
+//- Nếu là các tháng 1,3,5,7,8,10,12 => tháng đó có 31 ngày
+//- Nếu là tháng 2: Nếu năm nhuận(số năm chia 4 dư 0) thì tháng đó có 29 ngày, nếu không thì có 28 ngày
+//- Các trường hợp còn lại => tháng đó có 30 ngày
+//Output: Hiển thị tháng đó có bao nhiêu ngày
 function ex2() {
   let day2 = 0;
   let month2 = +document.getElementById("month2").value;
@@ -142,6 +150,15 @@ function ex2() {
   ex2El.innerHTML = `Tháng ${month2} có ${day2} ngày`;
 }
 // Bài 3: Viết chương trình nhập vào số nguyên có 3 chữ số. In ra cách đọc nó.
+//Input: số nguyên 3 chữ số
+//Logic:
+//- Dom số người dùng nhập vào và gọi tên
+//- Chia lấy dư số đó cho 10 => gán cho chữ số cuối cùng
+//- Lấy số ban đầu trừ số cuối cùng, chia lấy dư cho 100 , sau đó chia cho 10 => gán cho chữ số ở giữa
+//- Lấy số ban đầu chia cho 100 rồi làm tròn xuống => gán cho chữ số đầu tiên
+//- Sử dụng switch case cho các chữ số đầu, giữa, cuối, để ứng với từng giá trị, chúng sẽ có tên gọi bằng chữ riêng
+//- Dùng if để chia các trường hợp với tên gọi đặc biệt
+//Output: Xuất ra màn hình tên gọi của các
 function ex3() {
   const num = document.getElementById("num").value;
   let lastNum = num % 10;
@@ -246,6 +263,12 @@ function ex3() {
   }
 }
 // Bài 4:Cho biết tên và tọa độ nhà của 3 sinh viên. Cho biết tọa độ của trường đại học. Viết chương trình in tên sinh viên xa trường nhất.
+//Input: tên, tọa độ nhà của SV, tọa độ trường
+//Logic:
+//- Sử dụng công thức tính khoảng cách khi biết tọa độ điểm
+//- Tính khoảng các từ nhà của 3 SV so với trường
+//- Tìm giá trị max trong 3 khoảng cách
+//Output: Xuất ra màn hình tên của SV xa trường nhất
 function ex4() {
   const x1 = document.getElementById("x1").value;
   const y1 = document.getElementById("y1").value;
