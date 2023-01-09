@@ -281,17 +281,38 @@ function ex4() {
   const stu3 = document.getElementById("stu3").value;
   const xSchool = document.getElementById("xSchool").value;
   const ySchool = document.getElementById("ySchool").value;
+  const ex4El = document.getElementById("result4");
   const dis1 = Math.sqrt(Math.pow(2, xSchool - x1) + Math.pow(2, ySchool - y1));
   const dis2 = Math.sqrt(Math.pow(2, xSchool - x2) + Math.pow(2, ySchool - y2));
   const dis3 = Math.sqrt(Math.pow(2, xSchool - x3) + Math.pow(2, ySchool - y3));
-  let longest = Math.max(dis1, dis2, dis3);
-  if (longest == dis1) {
-    longest = stu1;
-  } else if (longest == dis2) {
-    longest = stu2;
+  if (dis1 === dis2 && dis2 === dis3) {
+    ex4El.innerHTML = `Khoảng các từ nhà đến trường của 3 sinh viên là bằng nhau`;
+  } else if (dis1 === dis2) {
+    if (dis1 > dis3) {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu1} và ${stu2}`;
+    } else {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu3}`;
+    }
+  } else if (dis3 === dis2) {
+    if (dis3 > dis1) {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu3} và ${stu2}`;
+    } else {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu1}`;
+    }
+  } else if (dis1 === dis3) {
+    if (dis1 > dis2) {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu1} và ${stu3}`;
+    } else {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu2}`;
+    }
   } else {
-    longest = stu3;
+    const longest = +math.max(dis1, dis2, dis3);
+    if (longest === dis1) {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu1}`;
+    } else if (longest === dis2) {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu2}`;
+    } else {
+      ex4El.innerHTML = `Sinh viên xa trường nhất: ${stu3}`;
+    }
   }
-  const ex4El = document.getElementById("result4");
-  ex4El.innerHTML = `Sinh viên ở xa trường nhất là ${longest}`;
 }
