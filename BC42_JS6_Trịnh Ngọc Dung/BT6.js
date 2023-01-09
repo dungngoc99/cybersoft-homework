@@ -9,4 +9,21 @@ function result1() {
   }
   ex1.innerHTML = `Số nguyên dương nhỏ nhất: ${n - 1}`;
 }
-// Viết chương trình nhập vào 2 số x, n tính tổng: S(n) = x + x^2+ x^3 + … + x^n (Sử dụng vòng lặp và hàm)
+// Bài 2: Viết chương trình nhập vào 2 số x, n tính tổng: S(n) = x + x^2+ x^3 + … + x^n (Sử dụng vòng lặp và hàm)
+function result2() {
+  const ex2 = document.getElementById("ex2");
+  const x = document.getElementById("num1").value;
+  const n = document.getElementById("num2").value;
+  let i = 1;
+  let sum = 0;
+  while (i <= n) {
+    sum += Math.pow(x, i);
+    i++;
+    console.log(sum);
+  }
+  ex2.innerHTML = `Tổng là: ${sum}`;
+}
+// Bài 3: Nhập vào n. Tính giai thừa 1*2*...n
+function result3() {
+  const num3 = document.getElementById("num3").value;
+}
