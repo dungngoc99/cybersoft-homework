@@ -25,5 +25,29 @@ function result2() {
 }
 // Bài 3: Nhập vào n. Tính giai thừa 1*2*...n
 function result3() {
-  const num3 = document.getElementById("num3").value;
+  const ex3 = document.getElementById("ex3");
+  const n = document.getElementById("num3").value;
+  let sum = 1;
+  let i = 1;
+  while (i <= n) {
+    sum *= i;
+    i++;
+  }
+  ex3.innerHTML = `n! là ${sum}`;
+}
+// Bài 4: Hãy viết chương trình khi click vào button sẽ in ra 10 thẻ div. Nếu div nào vị trí chẵn thì background màu đỏ và lẻ thì background màu xanh.
+
+function result4() {
+  let divs = document.getElementsByTagName("div");
+  for (let i = 1; i < divs.length; i++) {
+    if (i % 2 === 0) {
+      divs[i].style.background = "red";
+      divs[i].style.color = "white";
+      divs[i].innerHTML = `Div chẵn`;
+    } else {
+      divs[i].style.background = "blue";
+      divs[i].innerHTML = `Div lẻ`;
+      divs[i].style.color = "white";
+    }
+  }
 }
