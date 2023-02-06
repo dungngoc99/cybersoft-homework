@@ -1,16 +1,14 @@
-// Nhập mãng n
+// Nhập mảng n
 let arrNumber = [];
 
 function getNumberN() {
   let numberN = document.getElementById("numbern").value;
   arrNumber.push(+numberN);
-
   return arrNumber;
 }
 
 document.getElementById("btn-add").onclick = function () {
   let output = document.getElementById("btn-output");
-  output.classList.add("d-block");
   output.innerHTML = getNumberN();
 };
 
@@ -18,11 +16,11 @@ document.getElementById("btn-add").onclick = function () {
 document.getElementById("btn-sum").onclick = function () {
   let sum = 0;
 
-  for (let index = 0; index < arrNumber.length; index++) {
-    if (arrNumber[index] <= 0) {
+  for (let i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] <= 0) {
       continue;
     } else {
-      sum += arrNumber[index];
+      sum += arrNumber[i];
     }
   }
 
