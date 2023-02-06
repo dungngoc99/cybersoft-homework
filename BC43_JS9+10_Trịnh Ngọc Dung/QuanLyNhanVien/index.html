@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+
+@dungngoc99
+LamPhuongZ
+/
+Bootcamp42_JavascriptB21_LamMinhPhuong
+Public
+Fork your own copy of LamPhuongZ/Bootcamp42_JavascriptB21_LamMinhPhuong
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Bootcamp42_JavascriptB21_LamMinhPhuong/index.html
+@LamPhuongZ
+LamPhuongZ update all
+Latest commit 9b512ba 6 hours ago
+History
+1 contributor
+332 lines (283 sloc) 9.33 KB
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,8 +142,8 @@
 								<h3 class="text-left text-primary font-weight-bold">Danh sách nhân viên</h3>
 							</div>
 							<div class="col-md-6 text-right">
-								<button class="btn btn-primary" id="btnThem" data-toggle="modal" data-target="#myModal">Thêm nhân
-									viên</button>
+								<button class="btn btn-primary" id="btnThem" data-toggle="modal" data-target="#myModal"
+									onclick="resetInput()">Thêm nhân viên</button>
 							</div>
 						</div>
 					</div>
@@ -126,7 +155,8 @@
 								<div class="input-group">
 									<input type="text" class="form-control" placeholder="Loại nhân viên" id="searchName">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
+										<span class="input-group-text" id="btnTimNV" onclick="searchStaff()"><i
+												class="fa fa-search"></i></span>
 									</div>
 								</div>
 							</div>
@@ -282,8 +312,8 @@
 
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
-					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
-					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="btnThemNV" type="button" class="btn btn-success" onclick="createStaff()">Thêm người dùng</button>
+					<button id="btnCapNhat" type="button" class="btn btn-success" onclick="updateStaff()">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -318,6 +348,8 @@
 			});
 		});
 	</script>
+
+	<script src="./js/staff.js"></script>
 	<script src="./js/index.js"></script>
 </body>
 
